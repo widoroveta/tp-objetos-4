@@ -23,6 +23,8 @@ public class Main {
         peliculas.add(p2);
         peliculas.add(p2);
         peliculas.add(p2);
+        peliculas.add(p2);
+        peliculas.add(p2);
         peliculas.add(p3);
         peliculas.add(p3);
         peliculas.add(p3);
@@ -30,9 +32,13 @@ public class Main {
         peliculas.add(p3);
         peliculas.add(p3);
 
+    p1.setCantidad(peliculas,"Piratas del caribe y la maldicion del perla negra");
+    p2.setCantidad(peliculas,"Shrek");
+    p3.setCantidad(peliculas,"White Chicks");
+        for (Peliculas p:peliculas) {
 
-
-        for (Peliculas p:peliculas)
-            System.out.println(p.getTitulo() + p.getId());
-    }
+            System.out.println(p.getTitulo() + p.getCantidad());
+        }
+        System.out.println(p3.Alquilar("White Chicks"));
+        }
 }

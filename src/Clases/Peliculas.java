@@ -1,5 +1,7 @@
 package Clases;
 
+import java.util.List;
+
 public class Peliculas {
     private String titulo;
     private String fechaDeEstreno;
@@ -8,7 +10,7 @@ public class Peliculas {
     private String paisOrigen;
     private String descripcion;
     private String ca;
-private static int id =1;
+    private  int cantidad;
     public Peliculas() {
 
     }
@@ -21,7 +23,7 @@ private static int id =1;
         this.fechaDeEstreno = fechaDeEstreno;
         this.paisOrigen = paisOrigen;
         this.titulo = titulo;
-   
+
 
     }
 
@@ -77,9 +79,39 @@ private static int id =1;
     public String getGenero() {
         return genero;
     }
+    public boolean Alquilar (String titulo)
+    {
+        boolean v = false;
+        if (this.titulo.equalsIgnoreCase(titulo))
+        {
+            if (this.cantidad>0)
+            {
+                v=true;
+            }
+      /*      else {
+                v=false;
+            }*/
+        }
+       /* else {
+            v=false;*/
 
-    public int getId() {
-        return id;
+        return v;
+    }
+    public void setCantidad(List<Peliculas> peliculasList,String titulo) {
+      int i=0;
+        for (Peliculas p:peliculasList) {
+            if (p.titulo.equalsIgnoreCase(titulo))
+            {
+              ++i;
+            }
+
+        }
+        this.cantidad=i;
+
+    }
+
+    public int getCantidad() {
+        return cantidad;
     }
 
     public void setGenero(String genero) {
