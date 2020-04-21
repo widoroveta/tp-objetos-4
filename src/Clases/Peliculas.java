@@ -69,4 +69,16 @@ public class Peliculas {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    @Override
+    public String toString() {
+        return "\n Peliculas{" +
+                "titulo='" + titulo + '\'' +
+                ", fechaDeEstreno='" + fechaDeEstreno + '\'' +
+                ", duracion=" + duracion +
+                ", paisOrigen='" + paisOrigen + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", ca='" + ca + '\'' +
+                '}';
+    }
 }
