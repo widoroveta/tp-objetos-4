@@ -1,10 +1,11 @@
 package Clases;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class Peliculas {
     private String titulo;
-    private String fechaDeEstreno;
+    private LocalDate fechaDeEstreno;
     private String genero;
     private int duracion;
     private String paisOrigen;
@@ -15,7 +16,7 @@ public class Peliculas {
 
     }
 
-    public Peliculas(String titulo, String fechaDeEstreno,String genero, int duracion, String paisOrigen, String descripcion, String ca) {
+    public Peliculas(String titulo,int cantidad, LocalDate fechaDeEstreno,String genero, int duracion, String paisOrigen, String descripcion, String ca) {
         this.ca = ca;
         this.descripcion = descripcion;
         this.duracion = duracion;
@@ -23,11 +24,11 @@ public class Peliculas {
         this.fechaDeEstreno = fechaDeEstreno;
         this.paisOrigen = paisOrigen;
         this.titulo = titulo;
-
+        this.cantidad=cantidad;
 
     }
 
-    public String getFechaDeEstreno() {
+    public LocalDate getFechaDeEstreno() {
         return fechaDeEstreno;
     }
 
@@ -52,7 +53,7 @@ public class Peliculas {
         return descripcion;
     }
 
-    public void setFechaDeEstreno(String fechaDeEstreno) {
+    public void setFechaDeEstreno(LocalDate fechaDeEstreno) {
         this.fechaDeEstreno = fechaDeEstreno;
     }
 
@@ -79,7 +80,16 @@ public class Peliculas {
     public String getGenero() {
         return genero;
     }
-    public boolean Alquilar (String titulo)
+    public static boolean Alquilar (Peliculas p) {
+        boolean v=false;
+        if (p.cantidad>0)
+        {
+        v=true;
+        }
+
+        return v;
+    }
+    /*public boolean Alquilar (String titulo)
     {
         boolean v = false;
         if (this.titulo.equalsIgnoreCase(titulo))
@@ -91,12 +101,12 @@ public class Peliculas {
       /*      else {
                 v=false;
             }*/
-        }
+
        /* else {
             v=false;*/
-
+/*
         return v;
-    }
+    }*//*
     public void setCantidad(List<Peliculas> peliculasList,String titulo) {
       int i=0;
         for (Peliculas p:peliculasList) {
@@ -108,8 +118,11 @@ public class Peliculas {
         }
         this.cantidad=i;
 
+    }*/
+    public void setCantidad(int cantidad)
+    {
+        this.cantidad=cantidad;
     }
-
     public int getCantidad() {
         return cantidad;
     }

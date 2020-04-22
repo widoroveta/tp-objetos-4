@@ -1,24 +1,28 @@
 package Clases;
 
-public class Alquiler {
-    private String fechaDeRetiro;
-    private String fechaDeDevolucion;
-    private Peliculas pelicula;
+import java.time.LocalDate;
 
+public class Alquiler {
+    private LocalDate fechaDeRetiro;
+    private LocalDate fechaDeDevolucion;
+    private Peliculas pelicula;
+    private  Cliente cliente;
     public Alquiler() {
     }
 
-    public Alquiler(String fechaDeDevolucion, String fechaDeRetiro, Peliculas pelicula) {
+    public Alquiler(LocalDate fechaDeDevolucion, LocalDate fechaDeRetiro, Peliculas pelicula,Cliente cliente) {
         this.fechaDeDevolucion = fechaDeDevolucion;
         this.fechaDeRetiro = fechaDeRetiro;
         this.pelicula = pelicula;
     }
 
-    public void setFechaDeDevolucion(String fechaDeDevolucion) {
+
+
+    public void setFechaDeDevolucion(LocalDate fechaDeDevolucion) {
         this.fechaDeDevolucion = fechaDeDevolucion;
     }
 
-    public void setFechaDeRetiro(String fechaDeRetiro) {
+    public void setFechaDeRetiro(LocalDate fechaDeRetiro) {
         this.fechaDeRetiro = fechaDeRetiro;
     }
 
@@ -30,11 +34,11 @@ public class Alquiler {
         return pelicula;
     }
 
-    public String getFechaDeDevolucion() {
+    public LocalDate getFechaDeDevolucion() {
         return fechaDeDevolucion;
     }
 
-    public String getFechaDeRetiro() {
+    public LocalDate getFechaDeRetiro() {
         return fechaDeRetiro;
     }
 }

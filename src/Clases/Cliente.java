@@ -10,4 +10,13 @@ public class Cliente {
     public Cliente(){
 
     }
+    public Cliente(String nombre,String direccion,int telefono){
+            this.nombre=nombre;
+            this.direccion=direccion;
+            this.telefono=telefono;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
 }
