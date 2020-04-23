@@ -89,36 +89,6 @@ public class Peliculas {
 
         return v;
     }
-    /*public boolean Alquilar (String titulo)
-    {
-        boolean v = false;
-        if (this.titulo.equalsIgnoreCase(titulo))
-        {
-            if (this.cantidad>0)
-            {
-                v=true;
-            }
-      /*      else {
-                v=false;
-            }*/
-
-       /* else {
-            v=false;*/
-/*
-        return v;
-    }*//*
-    public void setCantidad(List<Peliculas> peliculasList,String titulo) {
-      int i=0;
-        for (Peliculas p:peliculasList) {
-            if (p.titulo.equalsIgnoreCase(titulo))
-            {
-              ++i;
-            }
-
-        }
-        this.cantidad=i;
-
-    }*/
     public void setCantidad(int cantidad)
     {
         this.cantidad=cantidad;

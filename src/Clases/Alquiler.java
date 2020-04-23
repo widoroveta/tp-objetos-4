@@ -7,13 +7,22 @@ public class Alquiler {
     private LocalDate fechaDeDevolucion;
     private Peliculas pelicula;
     private  Cliente cliente;
+    private String devolucion;
+    private static int idA;
+    private int id;
     public Alquiler() {
     }
 
-    public Alquiler(LocalDate fechaDeDevolucion, LocalDate fechaDeRetiro, Peliculas pelicula,Cliente cliente) {
+    public Alquiler( LocalDate fechaDeRetiro,LocalDate fechaDeDevolucion, Peliculas pelicula,Cliente cliente) {
         this.fechaDeDevolucion = fechaDeDevolucion;
         this.fechaDeRetiro = fechaDeRetiro;
         this.pelicula = pelicula;
+       if (fechaDeDevolucion.compareTo(LocalDate.now())>0)
+        this.devolucion = "No devuelta";
+       else
+           this.devolucion="devuelta";
+        this.id=idA;
+        idA++;
     }
 
 
@@ -40,5 +49,17 @@ public class Alquiler {
 
     public LocalDate getFechaDeRetiro() {
         return fechaDeRetiro;
+    }
+
+    @Override
+    public String toString() {
+        return "Alquiler{" +
+                "fechaDeRetiro=" + fechaDeRetiro +
+                ", fechaDeDevolucion=" + fechaDeDevolucion +
+                ", pelicula=" + pelicula +
+                ", cliente=" + cliente +
+                ", devolucion='" + devolucion + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

@@ -27,8 +27,10 @@ public  static Scanner scan;
         clientes.add(     new Cliente("Lionel","Alsina 2445",1556854452));
         clientes.add(     new Cliente("Maria","12 de octubre 6800 ",1532212254));
         List<Alquiler> alquilers =new ArrayList<>();
-
-
+        alquilers.add(new Alquiler(LocalDate.of(2020,3,20),LocalDate.of(2020,4,20), peliculas.get(2), clientes.get(0)));
+        alquilers.add(new Alquiler(LocalDate.of(2020,2,1),LocalDate.of(2020,3,1), peliculas.get(0), clientes.get(0)));
+        alquilers.add(new Alquiler(LocalDate.of(2020,4,21),LocalDate.of(2020,5,21), peliculas.get(3), clientes.get(1)));
+        System.out.println(alquilers.toString());
 
 
         }
